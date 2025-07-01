@@ -70,7 +70,8 @@ function main() {
     if (newName === "exit" || newName === "" || newName === '""') {
       break;
     }
-    let finalPath = newName ? dirPath + "/" + newName : dirPath;
+    dirPath = dirPath.endsWith("/") ? dirPath : dirPath + "/";
+    let finalPath = newFolder ? dirPath + newName + "/" : dirPath;
     if (newName === "") {
       console.log("Name cannot be empty");
       continue;
@@ -81,10 +82,10 @@ function main() {
     if (newFolder) {
       fs.mkdirSync(finalPath);
     }
-    let newJsx = finalPath + "/" + newName + ".jsx";
+    let newJsx = finalPath + newName + ".jsx";
     fs.writeFileSync(newJsx, jsxContent(newName));
     if (css) {
-      let newCss = finalPath + "/" + newName + ".css";
+      let newCss = finalPath + newName + ".css";
       fs.writeFileSync(newCss, cssContent(newName));
     }
   }
