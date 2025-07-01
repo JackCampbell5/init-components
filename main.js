@@ -14,8 +14,8 @@ function cssContent(filename) {
 }
 function jsxContent(filename) {
   return `import React from "react";
-import ReactDOM from "react-dom";$
-import './{filename}.css'
+import ReactDOM from "react-dom";
+import './${filename}.css'
 import PropTypes from 'prop-types';
 
 function ${filename}({}) {{
@@ -26,9 +26,9 @@ function ${filename}({}) {{
   );
 }}
 
-${filename}.propTypes = {{
+${filename}.propTypes = {
     // data: PropTypes.func.isRequired,
-}};
+};
 
 export default ${filename};`;
 }
