@@ -1,6 +1,6 @@
 {
   "name": "react-comp-init",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Init react components including folder if asked for",
   "keywords": [
     "react"
