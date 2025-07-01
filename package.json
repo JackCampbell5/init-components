@@ -1,0 +1,32 @@
+{
+  "name": "react-comp-init",
+  "version": "1.0.0",
+  "description": "Init react components including folder if asked for",
+  "keywords": [
+    "react"
+  ],
+  "homepage": "https://github.com/JackCampbell5/init-components#readme",
+  "bugs": {
+    "url": "https://github.com/JackCampbell5/init-components/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JackCampbell5/init-components.git"
+  },
+  "license": "ISC",
+  "author": "JackCampbell5",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "react-comp-init"
+  },
+  "dependencies": {
+    "commander": "^14.0.0",
+    "fs": "^0.0.1-security",
+    "node": "^22.17.0",
+    "prompt-sync": "^4.2.0"
+  },
+  "bin": {
+    "react-comp-init": "main.js"
+  }
+}
