@@ -8,23 +8,24 @@ import { program } from "commander";
 const prompt = promptUser();
 
 function cssContent(filename) {
-  return `/* .${filename}{{
-
-}} */`;
+  return ` .${filename}{
+  width: auto;
+  height: auto;
+}`;
 }
 function jsxContent(filename) {
   return `import React from "react";
 import ReactDOM from "react-dom";
-import './${filename}.css'
 import PropTypes from 'prop-types';
+import './${filename}.css'
 
-function ${filename}({}) {{
+function ${filename}({}) {
   return (
     <div className="${filename}">
       <h3>${filename}</h3>
     </div>
   );
-}}
+}
 
 ${filename}.propTypes = {
     // data: PropTypes.func.isRequired,
@@ -50,7 +51,6 @@ function main() {
       break;
     }
   }
-  // console.log(`Hello, ${name}!`);
   const cssQuest = prompt("Do you want to create a css file? [Y/n]");
   let css = false;
   if (cssQuest.toLowerCase() === "y" || cssQuest === "") {
